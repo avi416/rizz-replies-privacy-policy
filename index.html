@@ -114,32 +114,35 @@
   <main class="container">
     <header>
       <h1>Privacy Policy</h1>
-      <p class="muted"><strong>Rizz Replies</strong> &middot; Last updated: May 26, 2026</p>
+      <p class="muted"><strong>Rizz Replies</strong> &middot; Last updated: September 10, 2026</p>
     </header>
 
     <h2>1. Introduction</h2>
     <p>This Privacy Policy describes how Rizz Replies ("we", "us", "our", or the "App") handles information when you use our mobile application. Rizz Replies is an AI-powered text reply assistant that helps you generate suggested replies to messages you have received.</p>
-    <p>By using the App, you agree to the practices described in this Privacy Policy. If you do not agree, please do not use the App.</p>
+    <p>By using the App, you agree to the practices described in this Privacy Policy and to our <a href="./terms.html">Terms of Use</a>. If you do not agree, please do not use the App.</p>
 
     <h2>2. Information We Collect</h2>
     <p>Rizz Replies is designed to collect as little information as possible. We do not require you to create an account, and we do not ask for your name, email address, phone number, or any other personal identifier.</p>
     <p>The App processes the following information:</p>
     <ul>
-      <li><strong>Message text you provide:</strong> When you paste a received message into the App and request a suggested reply, that text is sent to our backend service for AI processing.</li>
-      <li><strong>Reply preferences:</strong> Optional settings (such as tone or style) that you choose when requesting a reply.</li>
+      <li><strong>Message text you provide:</strong> when you paste a received message into the App and request a suggested reply, that text is sent to our backend service for AI processing.</li>
+      <li><strong>Screenshots you choose to add:</strong> if you add a screenshot of a conversation, it is sent for the sole purpose of reading the messages out of it. See section 4.</li>
+      <li><strong>Reply preferences:</strong> the tone, goal, length, relationship and reply language you choose for a request.</li>
+      <li><strong>Writing-style examples you choose to provide:</strong> processed on your device to build a style profile. The examples themselves are not sent. See section 5.</li>
     </ul>
     <p>We do not collect:</p>
     <ul>
       <li>Login or account information (the App has no login system).</li>
       <li>Location data.</li>
       <li>Contacts.</li>
-      <li>Camera, microphone, photos, or media library content.</li>
+      <li>Camera or microphone access.</li>
+      <li>Photo library access &mdash; the App uses the Android photo picker, which hands over only the single image you select. The App holds no storage permission.</li>
       <li>Advertising identifiers.</li>
       <li>Analytics or usage tracking data.</li>
     </ul>
 
     <h2>3. How We Use Information</h2>
-    <p>The text you submit is used solely to:</p>
+    <p>What you submit is used solely to:</p>
     <ul>
       <li>Generate AI-suggested replies and return them to your device.</li>
       <li>Apply basic safety and moderation checks required to operate the service responsibly.</li>
@@ -147,34 +150,37 @@
     <p>We do not use your text to build user profiles, to advertise to you, or for any purpose unrelated to generating your requested reply.</p>
 
     <h2>4. AI Processing</h2>
-    <p>To generate replies, the App sends your submitted text to our backend at <code>https://rizz-replies.onrender.com</code>, which forwards the request to the <strong>Google Gemini API</strong> (provided by Google) for AI processing. The generated reply suggestions are then returned to your device.</p>
+    <p>To generate replies, the App sends what you submit to our backend at <code>https://rizz-replies.onrender.com</code>, which forwards the request to the <strong>Google Gemini API</strong> (provided by Google) for AI processing. The generated reply suggestions are then returned to your device.</p>
+    <p><strong>About screenshots:</strong> a screenshot is resized and re-encoded on your device before it leaves, and is sent for the <strong>single purpose of reading the messages out of it</strong>. It is <strong>not stored</strong> &mdash; not by the App, and not by our backend. What comes back is the extracted text, which from that point behaves exactly like text you pasted yourself; the image is discarded once the response returns.</p>
     <p>By using the App, you understand that:</p>
     <ul>
-      <li>Your submitted text is transmitted over the internet to our backend and to Google's Gemini API for the sole purpose of generating a reply.</li>
+      <li>What you submit is transmitted over the internet to our backend and to Google's Gemini API for the sole purpose of generating a reply.</li>
       <li>Google's handling of data sent to the Gemini API is governed by Google's own terms and privacy policies.</li>
-      <li>You should avoid pasting sensitive personal information (such as passwords, financial details, government IDs, or health information) into the App.</li>
+      <li>You should avoid submitting sensitive personal information (such as passwords, financial details, government IDs, or health information), and avoid screenshots containing anything you would not paste as text.</li>
     </ul>
 
     <h2>5. Local Storage</h2>
-    <p>Saved replies and your reply history are stored <strong>locally on your device</strong> using the device's standard preferences storage. This data:</p>
+    <p>The following are stored <strong>locally on your device</strong> using the device's standard preferences storage:</p>
     <ul>
-      <li>Stays on your device.</li>
-      <li>Is not uploaded to our servers as part of the history or saved replies feature.</li>
-      <li>Is removed if you uninstall the App or clear the App's data.</li>
+      <li>Saved replies and your reply history.</li>
+      <li>Your settings, including interface language and reply language.</li>
+      <li>Your writing-style profile, if you create one.</li>
     </ul>
+    <p>This data stays on your device, is not uploaded to our servers as history or as saved replies, and is removed if you uninstall the App or clear the App's data.</p>
+    <p><strong>About the style profile:</strong> if you teach the App to write more like you, the profile is derived on your device from the examples you provide, and it is stored only on your device. Your example messages themselves are never uploaded. When you generate a reply with the profile switched on, a compact description of your style &mdash; such as typical length, formality and emoji use, not your messages &mdash; is sent with that request in the same way as your tone settings, and is not retained by our backend or stored as a profile by the AI provider. You can delete the profile at any time from Settings.</p>
 
     <h2>6. Data Sharing</h2>
-    <p>We do not sell, rent, or trade your information. We share submitted text only with:</p>
+    <p>We do not sell, rent, or trade your information. We share what you submit only with:</p>
     <ul>
       <li><strong>Our backend service</strong> (<code>https://rizz-replies.onrender.com</code>), which acts as the intermediary that calls the AI provider.</li>
       <li><strong>Google Gemini API</strong>, strictly for the purpose of generating a reply you requested.</li>
     </ul>
-    <p>We do not share your text with advertisers, data brokers, or any other third parties.</p>
+    <p>We do not share your text, screenshots, or style description with advertisers, data brokers, or any other third parties.</p>
 
     <h2>7. Data Retention</h2>
     <ul>
-      <li><strong>On your device:</strong> Saved replies and history remain on your device until you delete them or uninstall the App.</li>
-      <li><strong>On our backend:</strong> We do not permanently store the messages you submit. Your text is processed in transit to generate a reply and is not retained as a permanent record by us. Temporary, short-lived processing data (such as request logs needed to operate the service) may exist briefly for reliability and abuse-prevention purposes and is not used to identify you.</li>
+      <li><strong>On your device:</strong> saved replies, history and your style profile remain on your device until you delete them or uninstall the App.</li>
+      <li><strong>On our backend:</strong> we do not permanently store the messages you submit. Your text is processed in transit to generate a reply and is not retained as a permanent record by us. <strong>Screenshots are held only for the duration of the request and are never written to disk.</strong> A style description sent with a request is treated like the request text: processed, not retained. Temporary, short-lived processing data (such as request logs needed to operate the service) may exist briefly for reliability and abuse-prevention purposes and is not used to identify you.</li>
       <li><strong>AI provider:</strong> Google's retention practices for data sent to the Gemini API are governed by Google.</li>
     </ul>
 
@@ -186,20 +192,26 @@
 
     <h2>10. User Controls</h2>
     <ul>
-      <li><strong>Clear history:</strong> You can clear your reply history at any time from the App's Settings.</li>
-      <li><strong>Clear saved replies:</strong> You can delete saved replies at any time from the App's Settings.</li>
-      <li><strong>Uninstall:</strong> Uninstalling the App removes all locally stored data associated with it.</li>
-      <li><strong>Choose what to submit:</strong> You decide what text to paste into the App. Avoid submitting information you do not want to be processed by an AI service.</li>
+      <li><strong>Clear history:</strong> you can clear your reply history at any time from the App's Settings.</li>
+      <li><strong>Clear saved replies:</strong> you can delete saved replies at any time from the App's Settings.</li>
+      <li><strong>Delete your writing-style profile:</strong> you can remove it at any time from the App's Settings.</li>
+      <li><strong>Remove a screenshot:</strong> you can take a screenshot back out before generating anything from it.</li>
+      <li><strong>Uninstall:</strong> uninstalling the App removes all locally stored data associated with it.</li>
+      <li><strong>Choose what to submit:</strong> you decide what text and which screenshots to give the App. Avoid submitting information you do not want to be processed by an AI service.</li>
     </ul>
 
-    <h2>11. Changes to This Policy</h2>
+    <h2>11. Languages</h2>
+    <p>The App's interface is available in 20 languages, and replies can be generated in the same 20. Your language choices are stored on your device and change nothing about what is collected or shared: the same text goes to the same provider regardless of which language you read or write in.</p>
+
+    <h2>12. Changes to This Policy</h2>
     <p>We may update this Privacy Policy from time to time. When we do, we will update the "Last updated" date at the top of this page. Material changes will be communicated through the App or this page. Continued use of the App after changes take effect constitutes acceptance of the updated policy.</p>
 
-    <h2>12. Contact Us</h2>
+    <h2>13. Contact Us</h2>
     <p>If you have any questions or concerns about this Privacy Policy or how the App handles your information, please contact us at:</p>
-    <p><strong>Email:</strong> <a href="mailto:ktaimvktaim@gmail.com">ktaimvktaim@gmail.com</a></p>
+    <p><strong>Email:</strong> <a href="mailto:alramx4@gmail.com">alramx4@gmail.com</a></p>
 
     <footer>
+      <p><a href="./terms.html">Terms of Use</a></p>
       &copy; 2026 Rizz Replies
     </footer>
   </main>
