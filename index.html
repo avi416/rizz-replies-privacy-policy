@@ -164,13 +164,15 @@
     <h2>5. Advertising</h2>
     <p>From version 1.3.0 the App shows ads to keep it free: a banner, occasional full-screen ads at natural breaks (for example when you start a new message), and an optional short video you can choose to watch to unlock an extra screenshot read on a day you have used up your free ones. Pasting text is always free and is never limited.</p>
     <p><strong>Where ads are not shown.</strong> The App shows <strong>no ads at all</strong> to users in the European Economic Area, the United Kingdom and Switzerland, or where the country cannot be determined. There, the advertising SDK is not started, nothing is sent to it, and screenshot reads are not limited. To decide this, our backend reads the country attached to each request by our network provider (Cloudflare). The country is not stored, logged or linked to you.</p>
-    <p><strong>Who provides the ads.</strong> Ads are served through <strong>Unity LevelPlay</strong>, Unity's ad mediation platform (formerly ironSource), which sources ads from advertisers through the <strong>ironSource</strong> ad exchange. Where ads are shown, its SDK collects, according to its own disclosure: approximate location, device and advertising identifiers, interactions with the ads, and app diagnostics, for advertising, analytics, fraud prevention and security. Its handling of that data is governed by its own policy:</p>
+    <p><strong>Who provides the ads.</strong> Ads are served through <strong>Unity LevelPlay</strong>, Unity's ad mediation platform (formerly ironSource), which sources ads from advertisers through the <strong>ironSource</strong> ad exchange and the <strong>Unity Ads</strong> ad network. Where ads are shown, their SDKs collect, according to their own disclosures: approximate location, device and advertising identifiers, interactions with the ads, app diagnostics, and, for Unity Ads, purchase history, for advertising, analytics, fraud prevention and security. Their handling of that data is governed by their own policies:</p>
     <ul>
       <li>ironSource (LevelPlay): <a href="https://developers.is.com/ironsource-mobile/unity/ironsource-mobile-privacy-policy/">ironSource Mobile Privacy Policy</a></li>
+      <li>Unity Ads: <a href="https://unity.com/legal/game-player-and-app-user-privacy-policy">Unity Game Player and App User Privacy Policy</a></li>
     </ul>
     <p><strong>Your choices.</strong></p>
     <ul>
       <li>On Android you can reset or delete your advertising ID, or opt out of ads personalisation, in your device's Settings (usually <em>Settings &rarr; Privacy &rarr; Ads</em>).</li>
+      <li>Inside a Unity ad you can change your privacy choices by tapping its Data Privacy icon.</li>
     </ul>
     <p><strong>The install ID.</strong> The random install ID described in section 2 is used only to count how many screenshots one installation has read today. Our backend never logs it and never stores it as-is: it keeps only a one-way hash made with a random key that is replaced every day, held in memory and discarded daily. It is not shared with the advertising SDK. Clearing the App's data creates a new one.</p>
 
