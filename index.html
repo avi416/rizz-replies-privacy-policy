@@ -114,7 +114,7 @@
   <main class="container">
     <header>
       <h1>Privacy Policy</h1>
-      <p class="muted"><strong>Rizz Replies</strong> &middot; Last updated: September 30, 2026</p>
+      <p class="muted"><strong>Rizz Replies</strong> &middot; Last updated: October 8, 2026</p>
     </header>
 
     <h2>1. Introduction</h2>
@@ -128,10 +128,11 @@
       <li><strong>Message text you provide:</strong> when you paste a received message into the App and request a suggested reply, that text is sent to our backend service for AI processing.</li>
       <li><strong>Screenshots you choose to add:</strong> if you add a screenshot of a conversation, it is sent for the sole purpose of reading the messages out of it. See section 4.</li>
       <li><strong>Reply preferences:</strong> the tone, goal, length, relationship and reply language you choose for a request.</li>
-      <li><strong>Writing-style examples you choose to provide:</strong> processed on your device to build a style profile. The examples themselves are not sent. See section 6.</li>
+      <li><strong>Writing-style examples you choose to provide:</strong> processed on your device to build a style profile. The examples themselves are not sent. See section 7.</li>
       <li><strong>A random install ID:</strong> on first launch the App creates a random identifier that is not derived from your device, your advertising ID or you. It is sent with each request so our backend can count how many screenshots one installation has read today. See section 5.</li>
       <li><strong>Your approximate country, per request:</strong> our backend reads the country our network provider (Cloudflare) attaches to each request, only to decide whether ads may be shown to you. It is not stored, logged or linked to you. See section 5.</li>
       <li><strong>Data collected by the advertising SDK, where ads are shown:</strong> see section 5.</li>
+      <li><strong>Your Rizz Pro purchase, if you subscribe:</strong> the purchase token Google Play gives the App, used to confirm the subscription with Google Play. See section 6.</li>
     </ul>
     <p>We do not collect:</p>
     <ul>
@@ -162,7 +163,7 @@
     </ul>
 
     <h2>5. Advertising</h2>
-    <p>From version 1.3.0 the App shows ads to keep it free: a banner, occasional full-screen ads at natural breaks (for example when you start a new message), and an optional short video you can choose to watch to unlock an extra screenshot read on a day you have used up your free ones. Pasting text is always free and is never limited.</p>
+    <p>From version 1.3.0 the App shows ads to keep it free: a banner, occasional full-screen ads at natural breaks (for example when you start a new message), and an optional short video you can choose to watch to unlock an extra screenshot read on a day you have used up your free ones. Pasting text is always free and is never limited. Rizz Pro subscribers see no ads at all (see section 6).</p>
     <p><strong>Where ads are not shown.</strong> The App shows <strong>no ads at all</strong> to users in the European Economic Area, the United Kingdom and Switzerland, or where the country cannot be determined. There, the advertising SDK is not started, nothing is sent to it, and screenshot reads are not limited. To decide this, our backend reads the country attached to each request by our network provider (Cloudflare). The country is not stored, logged or linked to you.</p>
     <p><strong>Who provides the ads.</strong> Ads are served through <strong>Unity LevelPlay</strong>, Unity's ad mediation platform (formerly ironSource), which sources ads from advertisers through the <strong>ironSource</strong> ad exchange and the <strong>Unity Ads</strong> ad network. Where ads are shown, their SDKs collect, according to their own disclosures: approximate location, device and advertising identifiers, interactions with the ads, app diagnostics, and, for Unity Ads, purchase history, for advertising, analytics, fraud prevention and security. Their handling of that data is governed by their own policies:</p>
     <ul>
@@ -176,39 +177,49 @@
     </ul>
     <p><strong>The install ID.</strong> The random install ID described in section 2 is used only to count how many screenshots one installation has read today. Our backend never logs it and never stores it as-is: it keeps only a one-way hash made with a random key that is replaced every day, held in memory and discarded daily. It is not shared with the advertising SDK. Clearing the App's data creates a new one.</p>
 
-    <h2>6. Local Storage</h2>
+    <h2>6. Rizz Pro (optional subscription)</h2>
+    <p>From version 1.4.0 you can subscribe to <strong>Rizz Pro</strong>, a monthly subscription sold through Google Play. It removes all ads &mdash; the advertising SDK is not started on your device while you are a subscriber &mdash; and raises your daily screenshot reads to the number shown when you subscribe. It renews automatically every month until you cancel. Pasting text and generating replies stay free for everyone.</p>
+    <p><strong>Payment.</strong> Payment is handled entirely by Google Play, under Google's terms and privacy policy. We never see your card or any other payment details.</p>
+    <p><strong>What we receive, and why.</strong> When you subscribe, each time the App starts, and when you tap &ldquo;Restore purchase&rdquo;, the App sends the purchase token Google Play gave it to our backend, which asks Google Play (through the Google Play Developer API) whether that subscription is active. The App also sends the token with each screenshot you add, so our backend can apply the subscriber limit. The token and Google's answer are used only to provide Rizz Pro.</p>
+    <p><strong>What we keep.</strong> Our backend does not store the purchase token. In memory only, it keeps a one-way hash of the token with Google's answer for at most one hour, and a count of today's screenshot reads under a hash made with a random key that is replaced every day. Nothing is written to disk, and a restart erases it. The token is never logged, never counted in our statistics, and never shared with the advertising SDK or anyone else. On your device, the App stores the token and the date until which the subscription was last confirmed.</p>
+    <p><strong>Managing or cancelling.</strong> You can manage or cancel the subscription at any time in Google Play (Play Store &rarr; Payments &amp; subscriptions &rarr; Subscriptions), or from the App's Settings, which opens that page.</p>
+
+    <h2>7. Local Storage</h2>
     <p>The following are stored <strong>locally on your device</strong> using the device's standard preferences storage:</p>
     <ul>
       <li>Saved replies and your reply history.</li>
       <li>Your settings, including interface language and reply language.</li>
       <li>Your writing-style profile, if you create one.</li>
       <li>The random install ID, the last advertising settings received from our backend, and when an ad was last shown (timestamps and counts only).</li>
+      <li>If you subscribe to Rizz Pro: the purchase token and the date until which the subscription was last confirmed.</li>
     </ul>
     <p>This data stays on your device, is not uploaded to our servers as history or as saved replies, and is removed if you uninstall the App or clear the App's data.</p>
     <p><strong>About the style profile:</strong> if you teach the App to write more like you, the profile is derived on your device from the examples you provide, and it is stored only on your device. Your example messages themselves are never uploaded. When you generate a reply with the profile switched on, a compact description of your style &mdash; such as typical length, formality and emoji use, not your messages &mdash; is sent with that request in the same way as your tone settings, and is not retained by our backend or stored as a profile by the AI provider. You can delete the profile at any time from Settings.</p>
 
-    <h2>7. Data Sharing</h2>
+    <h2>8. Data Sharing</h2>
     <p>We do not sell, rent, or trade your information. We share what you submit only with:</p>
     <ul>
       <li><strong>Our backend service</strong> (<code>https://rizz-replies.onrender.com</code>), which acts as the intermediary that calls the AI provider.</li>
       <li><strong>Google Gemini API</strong>, strictly for the purpose of generating a reply you requested.</li>
+      <li><strong>Google Play</strong>, only if you subscribe to Rizz Pro: the purchase token, to confirm the subscription is active.</li>
     </ul>
     <p>Where ads are shown (see section 5), the advertising SDK collects its own data directly from your device, as its providers describe. We do not share your text, screenshots, or style description with advertisers, data brokers, or any other third parties, and nothing you submit is passed to the advertising SDK.</p>
 
-    <h2>8. Data Retention</h2>
+    <h2>9. Data Retention</h2>
     <ul>
       <li><strong>On your device:</strong> saved replies, history and your style profile remain on your device until you delete them or uninstall the App.</li>
       <li><strong>On our backend:</strong> we do not permanently store the messages you submit. Your text is processed in transit to generate a reply and is not retained as a permanent record by us. <strong>Screenshots are held only for the duration of the request and are never written to disk.</strong> A style description sent with a request is treated like the request text: processed, not retained. Temporary, short-lived processing data (such as request logs needed to operate the service) may exist briefly for reliability and abuse-prevention purposes and is not used to identify you.</li>
       <li><strong>AI provider:</strong> Google's retention practices for data sent to the Gemini API are governed by Google.</li>
+      <li><strong>Rizz Pro:</strong> the purchase token is not stored by our backend; a hash of it is held in memory for at most one hour, and a daily read count until the end of the day (see section 6).</li>
     </ul>
 
-    <h2>9. Children's Privacy</h2>
+    <h2>10. Children's Privacy</h2>
     <p>Rizz Replies is not intended for children under the age of 13 (or the minimum age required in your country), and its ads are not directed at children. We do not knowingly collect information from children. If you believe a child has used the App, please contact us so we can address the matter.</p>
 
-    <h2>10. Security</h2>
+    <h2>11. Security</h2>
     <p>We use industry-standard practices to protect data in transit, including HTTPS encryption between the App, our backend, and the AI provider. However, no method of transmission over the internet is 100% secure, and we cannot guarantee absolute security. Please use the App responsibly and avoid submitting sensitive personal information.</p>
 
-    <h2>11. User Controls</h2>
+    <h2>12. User Controls</h2>
     <ul>
       <li><strong>Clear history:</strong> you can clear your reply history at any time from the App's Settings.</li>
       <li><strong>Clear saved replies:</strong> you can delete saved replies at any time from the App's Settings.</li>
@@ -219,13 +230,13 @@
       <li><strong>Choose what to submit:</strong> you decide what text and which screenshots to give the App. Avoid submitting information you do not want to be processed by an AI service.</li>
     </ul>
 
-    <h2>12. Languages</h2>
+    <h2>13. Languages</h2>
     <p>The App's interface is available in 20 languages, and replies can be generated in the same 20. Your language choices are stored on your device and change nothing about what is collected or shared: the same text goes to the same provider regardless of which language you read or write in.</p>
 
-    <h2>13. Changes to This Policy</h2>
+    <h2>14. Changes to This Policy</h2>
     <p>We may update this Privacy Policy from time to time. When we do, we will update the "Last updated" date at the top of this page. Material changes will be communicated through the App or this page. Continued use of the App after changes take effect constitutes acceptance of the updated policy.</p>
 
-    <h2>14. Contact Us</h2>
+    <h2>15. Contact Us</h2>
     <p>If you have any questions or concerns about this Privacy Policy or how the App handles your information, please contact us at:</p>
     <p><strong>Email:</strong> <a href="mailto:alramx4@gmail.com">alramx4@gmail.com</a></p>
 
